@@ -6,6 +6,7 @@
     <test name="SmokeTest">
         <classes>
             <class name="functional.IpsSearchTest" />
+            <class name="functional.IpsSearchProfileFunctionTest" />
         </classes>
     </test>
 </suite>
