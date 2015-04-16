@@ -3,7 +3,7 @@ package functional;
 import org.testng.annotations.Test;
 import pages.NotificationPage;
 
-public class IpsSearchProfileFunctionTest extends AbstractTest {
+public class SearchProfileTest extends AbstractTest {
 
     @Test
     public void test(){

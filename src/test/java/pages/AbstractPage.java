@@ -3,9 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import webdriver.Browser;
 
-/**
- * Created by Роман on 08.04.2015.
- */
 public abstract class AbstractPage {
     protected Browser browser;
     private static final String BASE_URL = "http://ips.vdz.ua/ua/";
@@ -17,6 +14,7 @@ public abstract class AbstractPage {
     public static final String PASSWORD_TEXT = "11111";
     public static final By ENTER_BUTTON_LINK = By.name("enter");
     public static final By LOGOUT_LINK = By.xpath("//div[@class='enterForm']/span[4]");
+    public static By DOCUMENT_TAB = By.cssSelector("h1.blockTitle.tab2");
 
     public AbstractPage(Browser browser){
         this.browser = browser;
@@ -41,10 +39,15 @@ public abstract class AbstractPage {
         return (SearchPage) this;
     }
 
+    public SearchDocumentPage openSearchDocumentPage(){
+        browser.findElement(SEARCH_PAGE_LINK).click();
+        browser.findElement(DOCUMENT_TAB).click();
+        return (SearchDocumentPage) this;
+    }
+
     public NotificationPage openNotificationPage(){
         browser.findElement(NOTIFICATION_PAGE_LINK).click();
         return (NotificationPage) this;
-
     }
 
     public abstract boolean isOpened();

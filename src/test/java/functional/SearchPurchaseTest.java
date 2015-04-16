@@ -3,17 +3,15 @@ package functional;
 import org.testng.annotations.Test;
 import pages.SearchPage;
 
-public class IpsSearchTest extends AbstractTest {
+public class SearchPurchaseTest extends AbstractTest {
 
     @Test
-    public void test(){
+    public void testPurchaseSearch(){
         SearchPage searchPage = new SearchPage(browser);
         searchPage.openHomePage();
         searchPage.login();
         searchPage.openSearchPage();
         searchPage.testIpsPurchaseSearchDaily();
-        searchPage.testIpsDocumentSearchDaily();
         searchPage.logout();
     }
-
 }

@@ -6,9 +6,6 @@ import utils.PropertyLoader;
 import webdriver.Browser;
 import webdriver.BrowserFactory;
 
-/**
- * Created by Роман on 08.04.2015.
- */
 public class AbstractTest {
     protected Browser browser;
 

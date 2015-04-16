@@ -5,8 +5,9 @@
 
     <test name="SmokeTest">
         <classes>
-            <class name="functional.IpsSearchTest" />
-            <class name="functional.IpsSearchProfileFunctionTest" />
+            <class name="functional.SearchPurchaseTest" />
+            <class name="functional.SearchDocumentTest" />
+            <class name="functional.SearchProfileTest" />
         </classes>
     </test>
 </suite>
