@@ -36,12 +36,10 @@ public class SearchDocumentPage extends AbstractPage {
 
     public void testIpsDocumentSearchDaily() {
         isOpened();
-        submit();
         selectDropDown(REGION_DROP_DOWN, "1");
         selectDropDown(REGION_DROP_DOWN, "-1");
-        selectDropDown(TYPE_DOCUMENT_DROP_DOWN, "1");
         selectDropDown(TYPE_DOCUMENT_DROP_DOWN, "2");
         selectDropDown(TYPE_DOCUMENT_DROP_DOWN, "3");
-//      testText(By.name("p_user"), "37927092");
+        testText(By.name("p_user"), "00034022");
     }
 }

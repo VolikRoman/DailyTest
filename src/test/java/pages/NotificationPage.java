@@ -18,9 +18,9 @@ public class NotificationPage extends AbstractPage {
     public static String SELECT_SUBJECT = "subject";
     public static By CREATED_PROFILE = By.xpath(".//div[@class='title']/strong[text()='" + PROFILE_NAME + "']");
     public static By FIELD_LINK = By.id("kw_");
-    public static String FIELD_TEXT = "???????";
+    public static String FIELD_TEXT = "Послуги";
     public static By ENTER_BUTTON_LINK = By.id("Submit");
-    public static By DELETE_PURCHASE_PROFILE = By.xpath("(.//a[@title = '?????????'])[7]/img");
+    public static By DELETE_PURCHASE_PROFILE = By.xpath("(.//a[@title = 'Видалити?'])[7]/img");
     public static By CLOSE_WINDOW = By.xpath(".//button[@type = 'button']/span");
 
 
