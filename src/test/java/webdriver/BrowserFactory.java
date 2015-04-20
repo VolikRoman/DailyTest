@@ -6,9 +6,6 @@ import utils.PropertyLoader;
 
 import java.io.File;
 
-/**
- * Created by Роман on 08.04.2015.
- */
 public class BrowserFactory {
     public static Browser create(String name){
         Browser browser;

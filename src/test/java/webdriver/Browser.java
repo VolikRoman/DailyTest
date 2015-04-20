@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by Роман on 08.04.2015.
- */
 public class Browser implements WebDriver {
     public WebDriver driver;
 
