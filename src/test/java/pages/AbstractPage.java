@@ -6,10 +6,11 @@ import webdriver.Browser;
 public abstract class AbstractPage {
     protected Browser browser;
     private static final String BASE_URL = "http://ips.vdz.ua/ua/";
+//    private static final String BASE_URL = "http://ipstest2.vdz.ua/ua/";
     public static final By SEARCH_PAGE_LINK = By.xpath("//a[1]/img");
     public static final By NOTIFICATION_PAGE_LINK = By.xpath("//a[2]/img");
     public static final By LOGIN_LINK = By.id("login");
-    public static final String LOGIN_TEXT = "VRomanA@i.ua";
+    public static final String LOGIN_TEXT = "VRomanA@ukr.net";
     public static final By PASSWORD_LINK = By.id("pwd");
     public static final String PASSWORD_TEXT = "11111";
     public static final By ENTER_BUTTON_LINK = By.name("enter");
@@ -21,8 +22,8 @@ public abstract class AbstractPage {
     }
 
     public void login(){
-        browser.findElement(LOGIN_LINK).sendKeys(LOGIN_TEXT); // логин
-        browser.findElement(PASSWORD_LINK).sendKeys(PASSWORD_TEXT);  //пароль
+        browser.findElement(LOGIN_LINK).sendKeys(LOGIN_TEXT);
+        browser.findElement(PASSWORD_LINK).sendKeys(PASSWORD_TEXT);
         browser.findElement(ENTER_BUTTON_LINK).click();
     }
 

@@ -20,7 +20,8 @@ public class NotificationPage extends AbstractPage {
     public static By FIELD_LINK = By.id("kw_");
     public static String FIELD_TEXT = "Послуги";
     public static By ENTER_BUTTON_LINK = By.id("Submit");
-    public static By DELETE_PURCHASE_PROFILE = By.xpath("(.//a[@title = 'Видалити?'])[7]/img");
+//    public static By DELETE_PURCHASE_PROFILE = By.id("delete_profile");
+    public static By DELETE_PURCHASE_PROFILE = By.xpath("(.//a[@id = 'delete_profile'])[6]/img");  //xpath("(.//a[@title = 'Видалити?'])[7]/img")
     public static By CLOSE_WINDOW = By.xpath(".//button[@type = 'button']/span");
 
 

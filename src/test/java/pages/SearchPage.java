@@ -63,6 +63,10 @@ public class SearchPage extends AbstractPage {
         testCheckBox(ONE_PARTICIPANT_PURCHASE_CHECKBOX);
         testText(SUBJECT_TEXTBOX, "Газ");
         testText(SUBJECT_TEXTBOX, "Послуги");
+        testText(SUBJECT_TEXTBOX, "Запчастини");
+        testText(SUBJECT_TEXTBOX, "Бензин");
         testText(CLASSIFIER_TEXTBOX, "01");
+        testText(CLASSIFIER_TEXTBOX, "1");
+        testText(CLASSIFIER_TEXTBOX, "11");
     }
 }
