@@ -6,7 +6,7 @@ import webdriver.Browser;
 public abstract class AbstractPage {
     protected Browser browser;
     private static final String BASE_URL = "http://ips.vdz.ua/ua/";
-//    private static final String BASE_URL = "http://ipstest2.vdz.ua/ua/";
+   //private static final String BASE_URL = "http://ipstest2.vdz.ua/ua/";
     public static final By SEARCH_PAGE_LINK = By.xpath("//a[1]/img");
     public static final By NOTIFICATION_PAGE_LINK = By.xpath("//a[2]/img");
     public static final By LOGIN_LINK = By.id("login");
@@ -14,7 +14,7 @@ public abstract class AbstractPage {
     public static final By PASSWORD_LINK = By.id("pwd");
     public static final String PASSWORD_TEXT = "11111";
     public static final By ENTER_BUTTON_LINK = By.name("enter");
-    public static final By LOGOUT_LINK = By.xpath("//div[@class='enterForm']/span[4]");
+    public static final By LOGOUT_LINK = By.id("exit"); //By.xpath("//div[@class='formTextReg link no_link ext']/span[4]")
     public static By DOCUMENT_TAB = By.cssSelector("h1.blockTitle.tab2");
 
     public AbstractPage(Browser browser){

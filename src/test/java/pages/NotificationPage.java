@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import webdriver.Browser;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class NotificationPage extends AbstractPage {
     public static By PROFILE_CREATE_BUTTON = By.id("searchProfileCreate");
     public static By PROFILE_CREATE_IFRAME = By.xpath(".//div[@id='ui-id-1']/iframe");
@@ -21,8 +24,9 @@ public class NotificationPage extends AbstractPage {
     public static String FIELD_TEXT = "Послуги";
     public static By ENTER_BUTTON_LINK = By.id("Submit");
 //    public static By DELETE_PURCHASE_PROFILE = By.id("delete_profile");
-    public static By DELETE_PURCHASE_PROFILE = By.xpath("(.//a[@id = 'delete_profile'])[6]/img");  //xpath("(.//a[@title = 'Видалити?'])[7]/img")
+    public static By DELETE_PURCHASE_PROFILE = By.xpath("(.//a[@id = 'delete_profile'])[6]/img"); //By.xpath("(.//a[@id = 'delete_profile'])[6]/img")
     public static By CLOSE_WINDOW = By.xpath(".//button[@type = 'button']/span");
+
 
 
     public NotificationPage(Browser browser) {
@@ -34,7 +38,7 @@ public class NotificationPage extends AbstractPage {
        return browser.findElement(PROFILE_CREATE_BUTTON).isDisplayed();
     }
 
-    public void testCreatePurchaseProfile(){
+    public void testCreatePurchaseProfile() throws AWTException {
         isOpened();
         browser.findElement(PROFILE_CREATE_BUTTON).click();
         browser.switchTo().frame(browser.findElement(PROFILE_CREATE_IFRAME));
@@ -43,12 +47,19 @@ public class NotificationPage extends AbstractPage {
         new Select(browser.findElement(PROFILE_INDUSTRY_DROPDOWN)).selectByValue(SELECT_INDUSTRY);
         new Select(browser.findElement(PROFILE_SUBJECT_DROPDOWN)).selectByValue(SELECT_SUBJECT);
         browser.findElement(FIELD_LINK).sendKeys(FIELD_TEXT);
+
         browser.findElement(ENTER_BUTTON_LINK).click();
-        browser.findElement(CREATED_PROFILE).isDisplayed();
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+
+        //browser.findElement(CREATED_PROFILE).isDisplayed();
+
         browser.findElement(DELETE_PURCHASE_PROFILE).click();
         Alert alert = browser.switchTo().alert();
         alert.accept();
-        browser.findElement(CLOSE_WINDOW).click();
+        //browser.findElement(CLOSE_WINDOW).click(); //так было раньше
+        robot.keyPress(KeyEvent.VK_ENTER);
+
 
     }
 }

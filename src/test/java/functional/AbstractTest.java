@@ -12,7 +12,7 @@ public class AbstractTest {
     @BeforeClass
     public void initDriver(){
         browser = BrowserFactory.create(PropertyLoader.loadProperty("browser"));
-        browser.manage().window().maximize();
+        browser.manage().window();
     }
 
     @AfterClass

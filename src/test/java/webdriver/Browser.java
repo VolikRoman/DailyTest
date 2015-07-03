@@ -33,14 +33,14 @@ public class Browser implements WebDriver {
 
     @Override
     public List<WebElement> findElements(By by) {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
         return driver.findElements(by);
     }
 
     @Override
     public WebElement findElement(By by) {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
         return driver.findElement(by);
     }
